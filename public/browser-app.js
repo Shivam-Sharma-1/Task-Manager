@@ -22,21 +22,16 @@ const showTasks = async () => {
 				return `<div class="single-task ${
 					completed && "task-completed"
 				}">
-<h5><span><i class="far fa-check-circle"></i></span>${name}</h5>
-<div class="task-links">
-
-
-
-<!-- edit link -->
-<a href="task.html?id=${taskID}"  class="edit-link">
-<i class="fas fa-edit"></i>
-</a>
-<!-- delete btn -->
-<button type="button" class="delete-btn" data-id="${taskID}">
-<i class="fas fa-trash"></i>
-</button>
-</div>
-</div>`;
+                    <h5><span><i class="far fa-check-circle"></i></span>${name}</h5>
+                    <div class="task-links">
+                    <a href="task.html?id=${taskID}"  class="edit-link">
+                    <i class="fas fa-edit"></i>
+                    </a>
+                    <button type="button" class="delete-btn" data-id="${taskID}">
+                    <i class="fas fa-trash"></i>
+                    </button>
+                    </div>
+                    </div>`;
 			})
 			.join("");
 		tasksDOM.innerHTML = allTasks;
