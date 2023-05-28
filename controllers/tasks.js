@@ -7,11 +7,11 @@ function createTask(req, res) {
 }
 
 function getTask(req, res) {
-	res.send("get a task");
+	res.json({ id: req.params.id });
 }
 
 function updateTask(req, res) {
-	res.send("update a task");
+	res.send(req.body);
 }
 
 function deleteTask(req, res) {
