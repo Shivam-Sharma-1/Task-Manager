@@ -8,7 +8,7 @@ const params = window.location.search;
 const id = new URLSearchParams(params).get("id");
 let tempName;
 
-const showTask = async () => {
+async function showTask() {
 	try {
 		const {
 			data: { task }
@@ -24,7 +24,7 @@ const showTask = async () => {
 	} catch (error) {
 		console.log(error);
 	}
-};
+}
 
 showTask();
 
